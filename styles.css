@@ -1,0 +1,91 @@
+/* /styles.css */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+}
+
+header {
+  background: #001f3f; /* Dark blue */
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.nav-links {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: #1e90ff; /* Bright blue */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #00aaff; /* Lighter blue on hover */
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+section {
+  margin: 30px 0;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #1e90ff; /* Blue border */
+  background: #000; /* Black background */
+  color: #fff; /* White text */
+  border-radius: 5px;
+}
+
+form input:focus, form textarea:focus {
+  outline: none;
+  border-color: #00aaff; /* Lighter blue on focus */
+}
+
+form .btn {
+  background: #1e90ff; /* Bright blue */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+form .btn:hover {
+  background: #00aaff; /* Lighter blue on hover */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+footer {
+  text-align: center;
+  background: #001f3f; /* Dark blue */
+  color: #fff;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 14px;
+}
