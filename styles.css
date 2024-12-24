@@ -4,12 +4,39 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.6;
-  background-color: #000; /* Black background */
   color: #fff; /* White text */
+  background-image: url('planet.jpg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+/* Raise the "Evren Karsidag" text higher */
+#home {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: flex-start; /* Align content closer to the top */
+  align-items: center;
+  flex-direction: column; /* Maintain vertical layout */
+  text-align: center;
+  padding-top: 50px; /* Add padding to fine-tune the position */
+}
+
+/* Header styling remains the same */
+#home h1 {
+  font-size: 5rem; /* Large font size */
+  font-weight: bold;
+  color: #fff; /* Ensure white color for readability */
+}
+
+#home p {
+  margin-top: 20px; /* Space below the name */
+  font-size: 1.2rem;
+  opacity: 0.8;
 }
 
 header {
-  background: #001f3f; /* Dark blue */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
   color: #fff;
   padding: 1rem 0;
 }
@@ -21,19 +48,42 @@ header {
 }
 
 .nav-links li {
-  display: inline;
-  margin: 0 15px;
+  display: inline-block; /* Ensure items are aligned inline */
+  margin: 0 80px; /* Increase spacing between items */
 }
 
 .nav-links a {
-  color: #1e90ff; /* Bright blue */
-  text-decoration: none;
+  display: inline-block; /* Makes the link behave like a block for padding and background */
+  color: #fff; /* White text */
+  background-color: #1e90ff; /* Bright blue background */
+  text-decoration: none; /* Remove underline */
   font-weight: bold;
-  transition: color 0.3s ease;
+  padding: 10px 20px; /* Add padding to create a box effect */
+  border-radius: 5px; /* Smooth edges */
+  position: relative; /* Needed for positioning the ::before element */
+  overflow: hidden; /* Ensures the animation doesn't spill outside the button */
+  z-index: 0; /* Keeps the text above the animation */
+  transition: color 0.3s ease; /* Smooth text color transition */
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  top: 100%; /* Start below the button */
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00aaff; /* Lighter blue for the hover effect */
+  z-index: -1; /* Places the fill below the text */
+  transition: top 0.5s ease; /* Smoothly moves the fill up */
+}
+
+.nav-links a:hover::before {
+  top: 0; /* Move the lighter blue fill to cover the entire button */
 }
 
 .nav-links a:hover {
-  color: #00aaff; /* Lighter blue on hover */
+  color: #fff; /* Ensure the text remains white during hover */
 }
 
 .container {
@@ -47,7 +97,8 @@ h1, h2 {
 }
 
 section {
-  margin: 30px 0;
+  margin: 80px 0; /* Increase margin between sections */
+  padding: 60px 20px; /* Increase padding inside each section */
 }
 
 form input, form textarea {
@@ -55,7 +106,7 @@ form input, form textarea {
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #1e90ff; /* Blue border */
-  background: #000; /* Black background */
+  background: rgba(255, 255, 255, 0.1); /* Transparent input background */
   color: #fff; /* White text */
   border-radius: 5px;
 }
@@ -83,9 +134,31 @@ form .btn:hover {
 
 footer {
   text-align: center;
-  background: #001f3f; /* Dark blue */
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent footer background */
   color: #fff;
-  padding: 10px;
-  margin-top: 20px;
+  padding: 20px; /* Add padding to footer */
+  margin-top: 60px;
   font-size: 14px;
+}
+
+#scroll-meter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0; /* Starts empty */
+  height: 5px; /* Height of the scroll meter */
+  background: #1e90ff; /* Bright blue color */
+  z-index: 9999; /* Ensures it stays on top of all content */
+}
+
+/* Fade-in class for animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
