@@ -4,3 +4,8 @@
 - add hobbies 
 - add photos
 - add interests and projects (created home server and hosted modded MC worlds, jailbroke and installed Linux on PS4 with emulators, created songs using FL studio, )
+
+
+MY OWN STUFF:
+- find a good coding learning website to quickly learn the basics of html and css
+- learn basics of web development with chatgpt
