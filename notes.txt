@@ -1,0 +1,6 @@
+- add a timeline in about me section
+- add favorite reads (quanta and fields)
+- add past contributions to research (you can go more in depth in comparison to the resume)
+- add hobbies 
+- add photos
+- add interests and projects (created home server and hosted modded MC worlds, jailbroke and installed Linux on PS4 with emulators, created songs using FL studio, )

@@ -58,10 +58,10 @@
   <footer>
     <nav>
       <ul class="nav-links">
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-  </footer>
+  </footer>  
   
   <script>
     window.addEventListener('scroll', () => {
@@ -72,6 +72,41 @@
       const scrollMeter = document.getElementById('scroll-meter');
       scrollMeter.style.width = `${scrollPercentage}%`; // Update the width of the scroll meter
     });
-  </script>  
+  </script> 
+  <script>
+    // Function to fetch the user's location and display a greeting
+    async function greetUser() {
+      try {
+        // Fetch location data from a public IP geolocation API
+        const response = await fetch('https://ipapi.co/json/');
+        const data = await response.json();
+  
+        // Extract the country name from the API response
+        const country = data.country_name || "the world";
+  
+        // Create and display the greeting message
+        const greeting = document.createElement('div');
+        greeting.id = 'greeting';
+        greeting.style.position = 'absolute';
+        greeting.style.top = '10px';
+        greeting.style.right = '10px';
+        greeting.style.background = 'rgba(0, 0, 0, 0.7)';
+        greeting.style.color = '#fff';
+        greeting.style.padding = '10px 20px';
+        greeting.style.borderRadius = '5px';
+        greeting.style.fontSize = '1rem';
+        greeting.textContent = `Hello ${country}!`;
+  
+        // Append the greeting to the body
+        document.body.appendChild(greeting);
+      } catch (error) {
+        console.error('Failed to fetch location:', error);
+      }
+    }
+  
+    // Call the greetUser function when the page loads
+    document.addEventListener('DOMContentLoaded', greetUser);
+  </script>   
 </body>
 </html>
+
