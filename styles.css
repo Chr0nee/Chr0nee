@@ -162,3 +162,24 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+#main {
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Stack elements vertically */
+  text-align: center; /* Center-align text */
+}
+
+#main h1 {
+  font-size: 5rem; /* Large header font size */
+  font-weight: bold;
+  color: #fff; /* Ensure white color for readability */
+}
+
+#main p {
+  margin-top: 20px; /* Space below header */
+  font-size: 1.2rem; /* Font size for body text */
+  opacity: 0.8; /* Slightly transparent */
+}
