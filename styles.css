@@ -1,13 +1,8 @@
 /* =========================
-   Importing Fonts
-   ========================= */
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400&display=swap');
-
-/* =========================
    General Styles
    ========================= */
 body {
-  font-family: 'Jost', sans-serif;
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
