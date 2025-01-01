@@ -80,6 +80,12 @@ header {
   padding: 20px;
 }
 
+.text-container {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
 /* =========================
    Home Section Styles
    ========================= */
@@ -266,31 +272,37 @@ footer {
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  max-width: 1000px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
 .blog-item {
-  display: block; /* Ensures the whole box is clickable */
+  display: block;
   background-color: #1f1f1f;
   color: #fff;
-  text-decoration: none; /* Removes underline for links */
+  text-decoration: none;
   padding: 20px;
   text-align: center;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0; /* Hidden by default */
+  transform: translateX(-20%); /* Starts outside the viewport */
+  transition: transform 0.8s ease-out, opacity 0.7s ease-out;
+}
+
+.blog-item.visible {
+  opacity: 1; /* Fade in */
+  transform: translateX(0); /* Slide into place */
 }
 
 .blog-item:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 255, 0.3);
-  text-decoration: none; /* Ensures no underline on hover */
 }
 
 .blog-title {
   margin: 0;
   font-size: 1.2rem;
 }
+
 
