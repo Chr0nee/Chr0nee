@@ -12,7 +12,6 @@
     <nav>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="blog.html">Blog</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -21,16 +20,20 @@
   </header>
   <main id="main">
     <h1>Welcome to My Blog</h1>
+    <section class="blog-list">
+      <a href="blogs/blog post 1.html" class="blog-item">
+        <h2 class="blog-title">The Monty Hall Problem - An Analysis</h2>
+      </a>
+      <a  href="blogs/blog post 2.html" class="blog-item">
+        <h2 class="blog-title">How Neural Networks Work</h2>
+      </a>
+      <a href="blogs/blog post 3.html" class="blog-item">
+        <h2 class="blog-title">Do Humans Think Differently from Machines? (Feynman)</h2>
+      </a>
+    </section>    
   </main>
-  <script>
-    window.addEventListener('scroll', () => {
-      const scrollTop = document.documentElement.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      const scrollPercentage = (scrollTop / scrollHeight) * 100;
 
-      const scrollMeter = document.getElementById('scroll-meter');
-      scrollMeter.style.width = `${scrollPercentage}%`;
-    });
-  </script>
+  <!-- Link to External JavaScript File -->
+  <script src="scripts.js"></script>
 </body>
 </html>

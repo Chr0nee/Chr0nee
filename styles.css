@@ -259,3 +259,38 @@ footer {
 #greeting.visible {
   opacity: 1;
 }
+
+/* Blog List Styling */
+.blog-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.blog-item {
+  display: block; /* Ensures the whole box is clickable */
+  background-color: #1f1f1f;
+  color: #fff;
+  text-decoration: none; /* Removes underline for links */
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 255, 0.3);
+  text-decoration: none; /* Ensures no underline on hover */
+}
+
+.blog-title {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
